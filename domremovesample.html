@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <div id="main">
+        <div id="title">hello all</div>
+        <div id="para">i am viswa</div>
+    </div>
+        <button type="button" onclick="removeElement()">Remove</button>
+    <script>
+        function removeElement(){
+            var box = document.getElementById("main");
+            var content = document.getElementById("para");
+            box.removeChild(content);     
+        }
+    </script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Form validation</title>
+
+</head>
+<body>
+    <h1>Perform Arithmetic Operations</h1>
+    <label for="num1">Enter First Number:</label><br>
+    <input type="number" id="num1"><br>
+    <label for="num2">Enter Second Number:</label><br>
+    <input type="number" id="num2"><br>
+    <button onclick="performArithmetic()">Calculate</button>
+    <h3>Results:</h3>
+    <p id="addition"></p>
+    <p id="subtraction"></p>
+    <p id="multiplication"></p>
+    <p id="division"></p>
+</body>
+    <script>
+        function performArithmetic() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var addition = num1 + num2;
+        var subtraction = num1 - num2;
+        var multiplication = num1 * num2;
+        var division = num1 / num2;
+        document.getElementById("addition").innerHTML = "Addition: " + addition;
+        document.getElementById("subtraction").innerHTML = "Subtraction: " + subtraction;
+        document.getElementById("multiplication").innerHTML = "Multiplication: " + multiplication;
+        document.getElementById("division").innerHTML = "Division: " + division;
+    }      
+    </script>
+</body>
+</html>

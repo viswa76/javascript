@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>listing data iteration 1</title>
+</head>
+<body>
+	<label for="apple">Enter an integer:</label>
+	<input type="text" onkeypress="viswa()" id="vichu">
+	<label for="apple1">Select a Value</label>
+	<select id="vichu3">
+		<option value="dropdown"></option>
+	</select>
+	<label for="apple2">Selected Value's Dropdown</label>
+	<select id="vichu4">
+		<option value="dropdown"></option>
+	</select>
+	<script>
+		function viswa(){
+			const abi = document.getElementById("vichu");
+			const abi3 = document.getElementById("vichu3");
+			const inputValue = parseInt(vichu.value);
+			let options = "";
+			for(let i = 1; i <= inputValue; i++){
+				options += `<option>${i}</option>`;
+			}
+			vichu3.innerHTML = options;
+		}
+
+		const vichu3 = document.getElementById("vichu3");
+		const vichu4 = document.getElementById("vichu4");
+
+		vichu3.addEventListener("change", viswa1);
+		
+		function viswa1(){
+			const selectValue = parseInt(vichu3.value);
+			let options = "";
+			for(let i = 1; i <= selectValue; i++){
+				options += `<option>${i}</option>`;
+			}
+			vichu4.innerHTML = options;
+		}
+	</script>
+</body>
+</html>

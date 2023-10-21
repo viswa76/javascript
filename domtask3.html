@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Square</title>
+</head>
+<body>
+    <h1>Area of the square</h1>
+    <input type = "number" id = "viswa">
+    <button type = "button" onclick="calculateArea()">Calculate</button>
+    <p id="result"></p>
+    <script>
+        function calculateArea(){
+            const viswa = document.getElementById("viswa").value;
+            const area = viswa*viswa;
+            document.getElementById("result").innerHTML="area of the square is :" + area;
+        }
+    </script>
+</body>
+</html>

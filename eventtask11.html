@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Function</title>
+</head>
+<body>
+  <h1>Date Function</h1>
+  <input type="date" id="date">
+  <input type="button" value="Date" onclick="getDate()">
+  <br>
+  <input type="text" id="datePlus5">
+  <input type="text" id="dateMinus5">
+  <script>
+    function getDate() {
+      var date = new Date(document.getElementById("date").value);
+      var datePlus5 = new Date(date.getTime() + 5 * 24 * 60 * 60 * 1000);
+      var dateMinus5 = new Date(date.getTime() - 5 * 24 * 60 * 60 * 1000);
+
+      document.getElementById("date").value = date.toDateString();
+      document.getElementById("datePlus5").value = datePlus5.toDateString();
+      document.getElementById("dateMinus5").value = dateMinus5.toDateString();
+    }
+  </script>
+</body>
+</html>

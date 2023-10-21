@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Listing Data Iteration 4</title>
+</head>
+<body>
+	<label for="apple">Enter an integer:</label>
+	<input type="text" oninput="viswa()" id="vis">
+	<label for="apple1">Select a Value</label>
+	<select id="vis3">
+		<option value="dropdown"></option>
+	</select>
+	<label for="apple2">Select Repeat Count</label>
+	<select id="vis4">
+		<option value="dropdown"></option>
+	</select>
+	<button id="vis5">Generate forms</button>
+	<div id="formContainer"></div>
+	<script>
+		function viswa(){
+			const vis = document.getElementById("vis");
+			const vis3 = document.getElementById("vis3");
+			const inputValue = parseInt(vis.value);
+			let options = "";
+			for(let i = 1; i <= inputValue; i++){
+				options += `<option>${i}</option>`;
+			}
+			vis3.innerHTML = options;
+		}
+		const vis3 = document.getElementById("vis3");
+		const vis4 = document.getElementById("vis4");
+		const vis5 = document.getElementById("vis5");
+		const formContainer = document.getElementById("formContainer");
+		vis3.addEventListener("change", viswa1);
+		function viswa1(){
+			const selectValue = parseInt(vis3.value);
+			let options = "";
+			for(let i = 1; i <= selectValue; i++){
+				options += `<option>${i}</option>`;
+			}   
+			vis4.innerHTML = options;
+		}
+		vis5.addEventListener("click", viswa2);
+		function viswa2() {
+			const selectValue = parseInt(vis4.value);
+			const username = "user" + document.getElementById("vis3").value;
+			const password = "pass" + document.getElementById("vis4").value;
+			let formHTML = "<form>";
+			for(let i = 1; i <= selectValue; i++){
+				formHTML += `<label for="form${i}">form ${i}: Username:</label>`;
+				formHTML += `<input type="text">`;
+				formHTML += `<label for="form${i}">password:</label>`;
+				formHTML += `<input type="text"><br>`;
+			}
+			formHTML += "</form>";
+			formContainer.innerHTML = formHTML;
+		}
+	</script>
+</body>
+</html>

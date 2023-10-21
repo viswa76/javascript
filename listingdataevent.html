@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Integer Input and Select Box</title>
+    
+</head>
+<body>
+    <div>
+        <h1>Enter an Integer:</h1>
+        <input type="text" id="integerInput">
+        <button onclick="addInteger()">Add to Select Box</button>
+        <select id="selectBox"></select>
+    </div>
+    <script>
+        function addInteger() {
+            const integerInput = document.getElementById('integerInput');
+            const selectBox = document.getElementById('selectBox');
+            const inputvalue = parseInt(integerInput.value);
+            let options = "";
+            for(let i=1; i<= inputvalue; i++){
+                options += `<option>${i}<option>`;
+            }
+            selectBox.innerHTML=options;
+        }
+    </script>
+</body>
+</html>
+

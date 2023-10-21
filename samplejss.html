@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+         <h1>The addition value : </h1>
+        <input type="number" id="input1">
+        <input type="number" id="input2">
+        <input type="submit" onclick="add()" id="submit">
+        <h2 id="output1"></h2>
+
+            <h1>The subraction value :</h1>
+            <input type="number" id="input3">
+            <input type="number" id ="input4">
+            <input type="submit" onclick="sub()" >
+            <h2 id ="output2"></h2>
+
+            <h1>The multiplication value is:</h1>
+            <input type="number" id ="input5">
+            <input type="number" id="input6">
+            <input type="submit" onclick="mul()" id="submit3" value="submit3">
+            <h3 id="output3"></h3>
+        
+        
+    <script>
+        function add(){
+            var x=document.getElementById("input1").value
+            var y = document.getElementById("input2").value
+            x=parseInt(x);
+            y=parseInt(y);
+            var a = x+y;
+            document.getElementById("output1").innerHTML = a;
+        }
+
+        function sub(){
+            var a = document.getElementById("input3").value;
+            var b = document.getElementById("input4").value;
+            
+            var c = a-b;
+            document.getElementById("output2").innerHTML = c;
+
+        }
+        function mul(){
+            var e=document.getElementById("input5").value
+            var f=document.getElementById("input6").value
+            var g=e*f;
+            document.getElementById("output3").innerHTML=g;
+
+        }
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><button onclick="viswa()">click</button></div>
+    <div><h1 id="text">hello</h1></div>
+    <script>
+        function viswa(){
+            var a = document.getElementById("text");
+            if(a.style.display == "none"){
+                a.style.display = "block";
+                a.style.textAlign = "center";
+                a.style.border = "2px solid green";
+            }
+            else{
+                a.style.display = "none";
+            }
+        }
+    </script>
+    </body>
+    </html>

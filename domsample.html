@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button type="button" onclick="insertElement()">Insert Here</button>
+    </body>
+    <script>
+        function insertElement(){
+            var box = document.createElement("div");
+            var content = document.createTextNode("hi how are you");
+            box.appendChild(content);
+            document.body.appendChild(box);
+        }
+    </script>
+</html>

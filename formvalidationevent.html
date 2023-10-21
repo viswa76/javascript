@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Form validation</title>
+
+</head>
+<body>
+    <form id="viswa">
+        <label for="username">username:</label><br>
+        <input type="text" id="viswa1"><br>
+        <label for="email">email:</label><br>
+        <input type="text" id="viswa2"><br>
+        <input type="button" onclick="viswa3()">
+    </form>
+    <script>
+        function viswa3(){
+            var username = document.getElementById("viswa1").value;
+            var email = document.getElementById("viswa2").value;
+            if(username =="" || email ==""){
+                alert("One of your data is empty, kindly fill it and try again:)");
+            } else {
+                alert("Form submitted successfully!");
+            }
+        }
+    </script>
+</body>
+</html>

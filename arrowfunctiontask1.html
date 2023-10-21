@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function person(){
+        this.name = 'viswa';
+        this.name1=function(){
+            console.log(this.name);
+        }
+        let innerfunc= ()=> {
+            console.log(this.name);
+        };
+        innerfunc();
+    }
+    const saravana = new person()
+    saravana.name1();
+</script>
+</body>
+</html>
